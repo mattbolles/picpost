@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "/public/css/stylesheet.css">
+    <link rel="icon" type="image/png" href="/public/images/favicon.png"/>
+    <script defer src = "/public/js/frontendjs.js"></script>
+    <title>View Image Post</title>
+</head>
+<body>
+    <div class = "grid-container">
+        <header>
+            {{> navbar}}
+        </header>
+        <div class = "site-content" id = "site-content">
+            <div id = "image-post-title"><strong>{{currentPost.title}}</strong></div></br>
+            <div id = "image-post">
+                <a href = "/{{currentPost.photopath}}"><img id = "image-post-image" src = "/{{currentPost.photopath}}" max-width = "90%"></a></br>
+            </div>
+            <br><div id = "image-post-author">Uploaded by: {{currentPost.username}}</div></br>
+            <div id = "image-post-date">Uploaded on: {{currentPost.created}}</div></br>
+            <div id = "image-post-description">{{currentPost.description}}</div>
+            
+            
+            </div>
+        </div>
+        <footer>
+            {{> footer}}
+        </footer>
+    </div>
+</body>   
+</html>

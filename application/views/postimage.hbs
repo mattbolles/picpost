@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "/public/css/stylesheet.css">
+    <link rel="icon" type="image/png" href="/public/images/favicon.png"/>
+    <script defer src = "/public/js/frontendjs.js"></script>
+    <title>PicPost - Upload New Image</title>
+</head>
+<body>
+    <div class = "grid-container">
+        <header>
+            {{> navbar}}
+        </header>
+        <div class = "site-content" id = "site-content">
+            <div class = "upload">
+                <form id = "post-image" method = "POST" enctype = "multipart/form-data" action = "/posts/createPost">
+                    <label for = "post-title">Post Title: </label>
+                    <input type = "text" id = "post-title" placeholder = "Title" name = "title" required>
+                    <br>    
+
+                    <label for = "post-description">Description: </label>
+                    <input type = "text" id = "post-description" placeholder = "Describe your image here..." name = "description" required>
+                    <br>
+
+                    <label>Upload image: </label>
+                    <input type = "file" accept = "image/*" name = "uploadImage" required>
+                    <br>
+
+                    
+                    <label class = "tos-box" for = "tos"> I have read and agreed to the <a href="http://mattrbolles.com/charles.jpg">Acceptable Use Policy</a>.
+                        <input type = "checkbox" id = "tos" name = "tos" required>
+                    </label><br>
+                    
+                    <button type = "upload">Upload</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            {{> footer}}
+        </footer>
+    </div>
+</body>   
+</html>
